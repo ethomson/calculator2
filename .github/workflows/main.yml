@@ -17,3 +17,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: echo hello world
+      - run: uname -a
+      - run: ls -Flas
+      - run: |
+          npm ci
+          npm run build --if-present
+          npm test
